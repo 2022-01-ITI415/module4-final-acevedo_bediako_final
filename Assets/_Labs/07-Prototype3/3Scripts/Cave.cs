@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Spotlight : MonoBehaviour
+public class Cave : MonoBehaviour
 {
     public int num;
     public AudioClip a_cave;
