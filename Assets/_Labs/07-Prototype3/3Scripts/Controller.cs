@@ -6,8 +6,9 @@ public class Controller : MonoBehaviour
 {
     private Rigidbody rb;
     public float time;
-    public AudioClip audio;
-    private AudioSource m_source;
+    public AudioClip a_coin;
+    //public AudioClip a_cave;
+    private AudioSource source;
     private int count = 0;
 
 
@@ -18,13 +19,19 @@ public class Controller : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-            m_source.clip = audio;
-            m_source.Play();
+            source.clip = a_coin;
+            source.Play();
         }
+       /* if(other.gameObject.CompareTag("Cave"))
+        {
+            source.clip = a_cave;
+            source.Play();
+        }*/
     }
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         time = 0.0f;
     }
 
